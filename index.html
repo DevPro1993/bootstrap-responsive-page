@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- Style.css -->
+    <link rel="stylesheet" href="./styles/styles.css">
+
+    <title>UI Assignment</title>
+</head>
+
+<body>
+
+    <!-- background image -->
+    <div class="background-image">
+    </div>
+
+    <!-- plus button -->
+    <img class="plus shadow-lg" src="./assets/icons8-plus.svg" alt="add item">
+
+
+    <!-- navbar -->
+    <nav class="container-fluid shadow-lg">
+        <div class="row">
+            <div class="col d-flex align-items-center justify-content-start company-logo mx-2">
+                <img src="./assets/ascent-logo.png" alt="ascent logo">
+            </div>
+            <div class="col d-flex align-items-center justify-content-end icons mx-2">
+                <img src="./assets/bell-icon.png" alt="notification" class="mx-2">
+                <img src="./assets/graph-icon.png" alt="stats" class="mx-2">
+                <img src="./assets/document-icon.png" alt="data" class="mx-2">
+                <img src="./assets/messages-icon.png" alt="conversations" class="mx-2">
+                <img src="./assets/profile-image-1.png" alt="profile image" class="mx-2"
+                    style="opacity: 1; border-radius: 50%;">
+            </div>
+        </div>
+    </nav>
+
+    <!-- main container -->
+
+    <div class="main-container">
+
+        <!-- top card -->
+
+        <div class="container-fluid top-card shadow">
+            <div class="row py-4 px-4">
+                <div class="col-sm-6 d-flex flex-column align-items-start justify-content-center">
+                    <h2>Punch In</h2>
+                    <p>Working remotely or using your phone to punch?</p>
+                </div>
+                <div class="col-sm-6 d-flex align-items-center justify-content-end punch-button">
+                    <button class="shadow rounded">Punch In</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- heading and selector -->
+
+        <h4 class="mb-4"><strong>My Requests</strong></h4>
+
+        <div class="row">
+            <div class="col d-flex">
+                <div class="selector shadow">
+                    <div data-id="all">All</div>
+                    <div data-id="pending">Pending</div>
+                    <div data-id="declined">Declined</div>
+                    <div data-id="approved">Approved</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- request container -->
+
+        <div class="request-container d-flex flex-column">
+
+            <!-- pending request -->
+
+            <div class="container-fluid request my-2" data-status="pending">
+                <div class="row first-row">
+                    <span class="dark-blue-color-code"></span>
+                    <div class="col d-flex justify-content-start align-items-center py-2 mx-2">
+                        <span class="request-status mx-1">Forgot to Punch</span>
+                        <span class="badge badge-pill badge-warning mx-1">Pending</span>
+                    </div>
+                    <div class="col d-flex justify-content-end align-items-center mx-2">
+                        <div class="manager-image">
+                            <div class="red-dot"></div>
+                            <img id="manager-pic" src="./assets/profile-image-2.jpeg" alt="manager-pic" class="mx-1">
+                        </div>
+                        <span class="mx-1 manager-text">Manager Response</span>
+                    </div>
+                </div>
+                <div class="row second-row">
+                    <div class="col-xl-6 col-lg-7 col-md-8 date">
+                        <div class="mx-2 month"><span class="numbers">20</span> Jan, 2020</div>
+                        <div class="mx-1"><span class="badge badge-pill badge-light"><span class="bold-badge">Mon</span>
+                                | <span class="bold-badge">9:00</span> am -
+                                <span class="bold-badge">6:00</span> pm</span>
+                        </div>
+                        <div class="applied mx-1">Applied: <span class="bold-badge">2</span> Jan</div>
+                    </div>
+                    <div class="col-xl-6 col-lg-5 col-md-4 time-column">
+                        <div class="applied mr-2 ml-4">Total Hours</div>
+                        <div><span class="numbers mx-2">09</span>h<span class="numbers mx-2">00</span>m</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- approved request -->
+
+            <div class="container-fluid request my-2" data-status="approved">
+                <div class="row first-row">
+                    <span class="cyan-color-code"></span>
+                    <div class="col d-flex justify-content-start align-items-center py-2 mx-2">
+                        <span class="request-status mx-1">Unable to Punch</span>
+                        <span class="badge badge-pill badge-green mx-1" style="color: white;">Approved</span>
+                    </div>
+                </div>
+                <div class="row second-row">
+                    <div class="col-xl-6 col-lg-7 col-md-8 date">
+                        <div class="mx-2 month"><span class="numbers">20</span> Jan, 2020</div>
+                        <div class="mx-1"><span class="badge badge-pill badge-light"><span class="bold-badge">Mon</span>
+                                | <span class="bold-badge">9:00</span> am -
+                                <span class="bold-badge">6:00</span> pm</span>
+                        </div>
+                        <div class="applied mx-1">Applied: <span class="bold-badge">2</span> Jan</div>
+                    </div>
+                    <div class="col-xl-6 col-lg-5 col-md-4 time-column">
+                        <div class="applied mr-2 ml-4">Total Hours</div>
+                        <div><span class="numbers mx-2">09</span>h<span class="numbers mx-2">00</span>m</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- declined request -->
+
+            <div class="container-fluid request my-2" data-status="declined">
+                <div class="row first-row">
+                    <span class="dark-blue-color-code"></span>
+                    <div class="col d-flex justify-content-start align-items-center py-2 mx-2">
+                        <span class="request-status mx-1">Forgot to Punch</span>
+                        <span class="badge badge-pill badge-danger mx-1" style="color: white;">Declined</span>
+                    </div>
+                </div>
+                <div class="row second-row">
+                    <div class="col-xl-6 col-lg-7 col-md-8 date">
+                        <div class="mx-2 month"><span class="numbers">20</span> Jan - <span class="numbers">28</span>
+                            Jan, 2020</div>
+                        <div class="mx-1"><span class="badge badge-pill badge-light"><span class="bold-badge">Mon</span>
+                                | <span class="bold-badge">9:00</span> am -
+                                <span class="bold-badge">6:00</span> pm</span>
+                        </div>
+                        <div class="applied mx-1">Applied: <span class="bold-badge">2</span> Jan</div>
+                    </div>
+                    <div class="col-xl-6 col-lg-5 col-md-4 time-column">
+                        <div class="applied mr-2 ml-4">Total Hours</div>
+                        <div><span class="numbers mx-2">09</span>h<span class="numbers mx-2">00</span>m</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- approved request -->
+
+            <div class="container-fluid request my-2" data-status="approved">
+                <div class="row first-row">
+                    <span class="cyan-color-code"></span>
+                    <div class="col d-flex justify-content-start align-items-center py-2 mx-2">
+                        <span class="request-status mx-1">Unable to Punch</span>
+                        <span class="badge badge-pill badge-green mx-1" style="color: white;">Approved</span>
+                    </div>
+                </div>
+                <div class="row second-row">
+                    <div class="col-xl-6 col-lg-7 col-md-8 date">
+                        <div class="mx-2 month"><span class="numbers">20</span> Jan, 2020</div>
+                        <div class="mx-1"><span class="badge badge-pill badge-light"><span class="bold-badge">Mon</span>
+                                | <span class="bold-badge">9:00</span> am -
+                                <span class="bold-badge">6:00</span> pm</span>
+                        </div>
+                        <div class="applied mx-1">Applied: <span class="bold-badge">2</span> Jan</div>
+                    </div>
+                    <div class="col-xl-6 col-lg-5 col-md-4 time-column">
+                        <div class="applied mr-2 ml-4">Total Hours</div>
+                        <div><span class="numbers mx-2">09</span>h<span class="numbers mx-2">00</span>m</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- approved request -->
+
+            <div class="container-fluid request my-2" data-status="approved">
+                <div class="row first-row">
+                    <span class="cyan-color-code"></span>
+                    <div class="col d-flex justify-content-start align-items-center py-2 mx-2">
+                        <span class="request-status mx-1">Unable to Punch</span>
+                        <span class="badge badge-pill badge-green mx-1" style="color: white;">Approved</span>
+                    </div>
+                </div>
+                <div class="row second-row">
+                    <div class="col-xl-6 col-lg-7 col-md-8 date">
+                        <div class="mx-2 month"><span class="numbers">20</span> Jan, 2020</div>
+                        <div class="mx-1"><span class="badge badge-pill badge-light"><span class="bold-badge">Mon</span>
+                                | <span class="bold-badge">9:00</span> am -
+                                <span class="bold-badge">6:00</span> pm</span>
+                        </div>
+                        <div class="applied mx-1">Applied: <span class="bold-badge">2</span> Jan</div>
+                    </div>
+                    <div class="col-xl-6 col-lg-5 col-md-4 time-column">
+                        <div class="applied mr-2 ml-4">Total Hours</div>
+                        <div><span class="numbers mx-2">09</span>h<span class="numbers mx-2">00</span>m</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- declined request -->
+
+            <div class="container-fluid request my-2" data-status="declined">
+                <div class="row first-row">
+                    <span class="dark-blue-color-code"></span>
+                    <div class="col d-flex justify-content-start align-items-center py-2 mx-2">
+                        <span class="request-status mx-1">Forgot to Punch</span>
+                        <span class="badge badge-pill badge-danger mx-1" style="color: white;">Declined</span>
+                    </div>
+                </div>
+                <div class="row second-row">
+                    <div class="col-xl-6 col-lg-7 col-md-8 d-flex date">
+                        <div class="mx-2 month"><span class="numbers">20</span> Jan - <span class="numbers">28</span>
+                            Jan, 2020</div>
+                        <div class="mx-1"><span class="badge badge-pill badge-light"><span class="bold-badge">Mon</span>
+                                | <span class="bold-badge">9:00</span> am -
+                                <span class="bold-badge">6:00</span> pm</span>
+                        </div>
+                        <div class="applied mx-1">Applied: <span class="bold-badge">2</span> Jan</div>
+                    </div>
+                    <div class="col-xl-6 col-lg-5 col-md-4 time-column">
+                        <div class="applied mr-2 ml-4">Total Hours</div>
+                        <div><span class="numbers mx-2">09</span>h<span class="numbers mx-2">00</span>m</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- pending request -->
+
+            <div class="container-fluid request my-2" data-status="pending">
+                <div class="row first-row">
+                    <span class="dark-blue-color-code"></span>
+                    <div class="col d-flex justify-content-start align-items-center py-2 mx-2">
+                        <span class="request-status mx-1">Forgot to Punch</span>
+                        <span class="badge badge-pill badge-warning mx-1">Pending</span>
+                    </div>
+                </div>
+                <div class="row second-row">
+                    <div class="col-xl-6 col-lg-7 col-md-8 date">
+                        <div class="mx-2 month"><span class="numbers">20</span> Jan, 2020</div>
+                        <div class="mx-1"><span class="badge badge-pill badge-light"><span class="bold-badge">Mon</span>
+                                | <span class="bold-badge">9:00</span> am -
+                                <span class="bold-badge">6:00</span> pm</span>
+                        </div>
+                        <div class="applied mx-1">Applied: <span class="bold-badge">2</span> Jan</div>
+                    </div>
+                    <div class="col-xl-6 col-lg-5 col-md-4 time-column">
+                        <div class="applied mr-2 ml-4">Total Hours</div>
+                        <div><span class="numbers mx-2">09</span>h<span class="numbers mx-2">00</span>m</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- pending request -->
+
+            <div class="container-fluid request my-2" data-status="pending">
+                <div class="row first-row">
+                    <span class="dark-blue-color-code"></span>
+                    <div class="col d-flex justify-content-start align-items-center py-2 mx-2">
+                        <span class="request-status mx-1">Forgot to Punch</span>
+                        <span class="badge badge-pill badge-warning mx-1">Pending</span>
+                    </div>
+                </div>
+                <div class="row second-row">
+                    <div class="col-xl-6 col-lg-7 col-md-8 date">
+                        <div class="mx-2 month"><span class="numbers">20</span> Jan, 2020</div>
+                        <div class="mx-1"><span class="badge badge-pill badge-light"><span class="bold-badge">Mon</span>
+                                | <span class="bold-badge">9:00</span> am -
+                                <span class="bold-badge">6:00</span> pm</span>
+                        </div>
+                        <div class="applied mx-1">Applied: <span class="bold-badge">2</span> Jan</div>
+                    </div>
+                    <div class="col-xl-6 col-lg-5 col-md-4 time-column">
+                        <div class="applied mr-2 ml-4">Total Hours</div>
+                        <div><span class="numbers mx-2">09</span>h<span class="numbers mx-2">00</span>m</div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <!-- Bootstrap JS imports -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+    </script>
+
+    <!-- jQuery -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+    <!-- App.js -->
+    <script src="app.js"></script>
+
+</body>
+
+</html>
